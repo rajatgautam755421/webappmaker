@@ -1,11 +1,12 @@
-const {connect} = require('mongoose')
+const { connect } = require("mongoose");
 
-connect("mongodb+srv://rajat:12345@cluster0.fvikz.mongodb.net/weappmaker?retryWrites=true&w=majority",(error)=>{
-    if(error){
-        console.log(error.message)
+connect(
+  "mongodb+srv://rajat:rajat12345@cluster0.xtjbz.mongodb.net/UsersModel",
+  (error) => {
+    if (error) {
+      console.log(error.message);
+    } else {
+      console.log("Connected To Database");
     }
-    else{
-        console.log("Connected To Database")
-    }
-})
-
+  }
+);

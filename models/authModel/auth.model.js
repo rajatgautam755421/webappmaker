@@ -19,7 +19,6 @@ const userSchema = Schema(
     },
     password: {
       type: String,
-      
       unique: true,
     },
     role: {
