@@ -1,6 +1,14 @@
 const router = require('express').Router();
-const {loginUser} = require('../../controllers/autoController/auth.controller')
+const {userLogin,createAUser} = require('../../controllers/autoController/auth.controller')
+const {verify} = require('../../middlewares/verifyUser')
 
-router.route('/login').get(loginUser)
+router.route('/register').post(createAUser)
+router.route('/login').post(userLogin)
+router.get('/visit',verify,(req,res)=>{
+    res.status(200).json({
+        status : "success",
+        message : "visited"
+    })
+})
 
 module.exports = router
