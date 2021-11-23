@@ -26,12 +26,12 @@ const createAUser = async (req, res) => {
   }
 };
 
-//Login In A User
+//LogIn A User
 
 const userLogin = async (req, res) => {
   //check if user is already present
   const presentUser = await UserModel.findOne({ email: req.body.email });
-  console.log(presentUser);
+
   //Email exists or not
   if (!presentUser) return res.status(400).send("Email is not found");
   //password matches or not

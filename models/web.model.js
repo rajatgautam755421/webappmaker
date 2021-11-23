@@ -13,7 +13,7 @@ const webSchema = new Schema({
   },
   priceRange: {
     type: String,
-    enum: ["20", "40", "60", "above 60"],
+    enum: ["20", "40", "100"],
     required: true,
   },
   noOfPages: {
