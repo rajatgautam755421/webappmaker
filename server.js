@@ -22,6 +22,12 @@ const webRoute = require("./routes/web.route");
 const contactRoute = require("./routes/contact.route");
 
 //Implementing Routes
+app.get("/", (req, res) => {
+  res.status(200).json({
+    status: "success",
+    message: "Welcome",
+  });
+});
 app.use("/api/v1/user", authRoute);
 app.use("/api/v1", webRoute);
 app.use("/api/v1", contactRoute);
